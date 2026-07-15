@@ -17,7 +17,6 @@ defineProps<{
 
       <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(320px,0.9fr)] lg:items-end">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-accent">This is not a productivity dashboard</p>
           <h1 class="mt-5 max-w-4xl font-display text-5xl leading-[0.95] text-ink sm:text-6xl lg:text-7xl">
             {{ title }}
           </h1>
