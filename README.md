@@ -1,23 +1,75 @@
-# Death by Meetings — Starter Context Pack
+# The Productivity Paradox: Death by Meetings
+## Vue Context Pack
 
-This folder contains starter context assets for building an interactive data story with GitHub Copilot or another agentic IDE.
+This context pack is designed to help GitHub Copilot Agent, Cursor, Claude Code, Windsurf, or another agentic IDE build a Vue-based interactive data story.
 
-## Files
+## What this is
 
-- `death-by-meetings-prd.md` — product requirements and narrative direction
-- `meeting-fragmentation-data.json` — fake reference dataset
-- `component-brief.md` — recommended component structure and UI behavior
-- `copilot-context.md` — concise context file to paste into Copilot or include in the repo
-- `scoring.ts` — optional TypeScript utility for the simulator logic
+An interactive data story for assignment P302: Interactive Data Story.
+
+The story explores a simple but surprising idea:
+
+> The least busy calendar is not always the most productive calendar.
+
+## Files in this pack
+
+### Context markdown
+
+- `PRD.md` — product requirements, narrative arc, audience, MVP scope, technical approach, and success criteria
+- `BUILD_PLAN.md` — step-by-step implementation order for the agentic IDE
+- `STORY_GUIDELINES.md` — storytelling rules to prevent the app from becoming a generic dashboard
+- `COPILOT_CONTEXT.md` — concise technical and product context for GitHub Copilot
+
+### Source starter files
+
+- `src/data/meeting-fragmentation-data.json` — fake dataset for the story
+- `src/composables/useProductivityScoring.ts` — scoring composable for simulator logic
+- `src/composables/useNarrativeGenerator.ts` — simple narrative helper for human-readable interpretations
+- `src/types/meetingTypes.ts` — TypeScript interfaces for the data model
+
+## Suggested repo structure
+
+```text
+/
+├── PRD.md
+├── BUILD_PLAN.md
+├── STORY_GUIDELINES.md
+├── COPILOT_CONTEXT.md
+├── README.md
+│
+└── src/
+    ├── components/
+    │   ├── HeroSection.vue
+    │   ├── WorkerComparison.vue
+    │   ├── CalendarTimeline.vue
+    │   ├── PredictionReveal.vue
+    │   ├── InsightCard.vue
+    │   ├── ProductivitySimulator.vue
+    │   ├── ScoreMeter.vue
+    │   └── TakeawaySection.vue
+    │
+    ├── composables/
+    │   ├── useProductivityScoring.ts
+    │   └── useNarrativeGenerator.ts
+    │
+    ├── data/
+    │   └── meeting-fragmentation-data.json
+    │
+    ├── types/
+    │   └── meetingTypes.ts
+    │
+    ├── App.vue
+    └── main.ts
+```
 
 ## Suggested first prompt for GitHub Copilot
 
 ```text
-Using the files in this repo as context, build a polished React single-page interactive data story called “Death by Meetings.” Start with the PRD and fake JSON data. Implement the story sections, prediction/reveal interaction, calendar comparison, and simulator. Use clean reusable components, accessible controls, and a modern consulting-style visual design.
+Read PRD.md, BUILD_PLAN.md, STORY_GUIDELINES.md, COPILOT_CONTEXT.md, and the dataset. Build this as a Vue 3 + Vite + TypeScript single-page interactive data story. Follow the build plan phase by phase. Prioritize storytelling over dashboard design. Use local JSON data only. Start by scaffolding the app structure and implementing the hero, comparison, prediction, reveal, simulator, and takeaway sections.
 ```
 
-## Suggested second prompt
+## Suggested refinement prompt
 
 ```text
-Refine the experience so it feels more like a guided data story than a dashboard. Add progressive disclosure, stronger narrative copy, and subtle animations between sections. Make the simulator outputs feel explanatory, not just numeric.
+Review the current implementation against STORY_GUIDELINES.md. Identify any places where the app feels too much like a dashboard and revise the experience to make the narrative clearer, more progressive, and more emotionally compelling. Add plain-language explanations where metrics currently stand alone.
 ```

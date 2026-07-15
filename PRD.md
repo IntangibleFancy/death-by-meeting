@@ -1,47 +1,67 @@
-# PRD: Death by Meetings — Interactive Data Story
+# PRD: The Productivity Paradox
+## Interactive Data Story: Death by Meetings
 
 ## 1. Product Summary
 
-**Project name:** Death by Meetings  
+**Project name:** The Productivity Paradox  
+**Working subtitle:** Death by Meetings  
+**Assignment:** P302 — Interactive Data Story  
 **Industry:** Professional Services / Knowledge Work / Consulting Operations  
-**Audience:** Knowledge workers, consultants, delivery leads, people managers, and operations leaders  
-**Format:** Interactive web-based data story  
+**Audience:** Knowledge workers, consultants, managers, delivery leads, and operations leaders  
+**Format:** Interactive single-page web application  
+**Recommended framework:** Vue 3 + Vite + TypeScript
 
 ### One-line concept
-People think too many meeting hours are the problem, but the hidden productivity killer is **meeting fragmentation**: frequent context switching, poorly spaced meetings, and the loss of meaningful focus blocks.
+People assume fewer meeting hours means a more productive day. This interactive story shows why that assumption can be wrong: a calendar with fewer meetings can still be less productive when meetings are scattered and destroy meaningful focus time.
 
 ### Core point of view
-The most damaging workday is not always the one with the most meeting hours. It is often the one where meetings are scattered across the day in a way that prevents deep work.
+The most damaging workday is not always the one with the most meeting hours. It is often the one where meetings are fragmented across the day, forcing repeated context switching and preventing deep work.
 
 The experience should help users walk away understanding:
 
-> A calendar can look “less busy” by total meeting hours and still be more harmful to productivity if it destroys focus time.
+> Meeting hours tell you how full the calendar is. Fragmentation tells you how usable the day is.
 
 ---
 
 ## 2. Problem Statement
 
-Knowledge workers often evaluate workload by looking at the total number of meeting hours in a day or week. That metric is easy to understand, but it hides an important reality: a calendar with fewer meeting hours can still create more cognitive load if those meetings are fragmented across the day.
+Knowledge workers often evaluate workload by looking at total meeting hours. That metric is easy to understand, but it hides an important reality: a calendar with fewer meeting hours can still create more cognitive load if the meetings are scattered across the day.
 
 This data story illustrates how context switching, meeting spacing, meeting count, and uninterrupted focus blocks combine to shape a person’s actual ability to do meaningful work.
 
+The goal is not to create a productivity dashboard. The goal is to build a guided experience that turns invented data into a clear, memorable story.
+
 ---
 
-## 3. Narrative Arc
+## 3. Product Thesis
+
+Most people ask:
+
+> How many hours of meetings do I have?
+
+This story argues that the better question is:
+
+> How much usable focus time does my calendar protect?
+
+The project should make this point through a prediction, a reveal, and an interactive simulation.
+
+---
+
+## 4. Narrative Arc
 
 The product should feel like a short interactive story, not a dashboard.
 
 ### Act 1 — The Assumption
 Show two workers with different calendars.
 
-- **Alex:** 6 hours of meetings, but meetings are clustered into two blocks.
-- **Jordan:** 4 hours of meetings, but meetings are scattered across the whole day.
+- **Alex:** 6 hours of meetings, but meetings are clustered into two main blocks.
+- **Jordan:** 4 hours of meetings, but meetings are scattered across the day.
 
 Prompt the user:
 
 > Who had the more productive day?
 
-Most users will assume Jordan did, because Jordan had fewer meeting hours.
+Most users will assume Jordan did because Jordan had fewer meeting hours.
 
 ### Act 2 — The Reveal
 Reveal that Jordan had worse productivity despite fewer meeting hours.
@@ -66,35 +86,35 @@ Let the user adjust meeting patterns and immediately see the effect on productiv
 
 Possible controls:
 
-- Meeting count
+- Meeting pattern: clustered or scattered
+- Number of meetings
 - Average meeting length
-- Whether meetings are clustered or scattered
-- Number of attendees
-- Focus block protection
 - Async replacement rate
+- Protected focus block on/off
 
 ### Act 5 — The Takeaway
 End with a clear recommendation:
 
-> If you want better productivity, do not only reduce meeting hours. Protect uninterrupted focus blocks and cluster necessary meetings.
+> Do not just reduce meetings. Design the calendar for focus.
 
 ---
 
-## 4. Primary User Goals
+## 5. Primary User Goals
 
 As a user, I want to:
 
 1. Quickly understand why meeting fragmentation matters.
 2. Compare two workday patterns side by side.
-3. Interact with variables that affect productivity.
-4. See a plain-language explanation of what changed and why.
-5. Leave with a memorable takeaway I can apply to my own calendar.
+3. Predict which day is more productive before seeing the hidden metrics.
+4. Interact with variables that affect productivity.
+5. See a plain-language explanation of what changed and why.
+6. Leave with a practical lesson I can apply to my own calendar.
 
 ---
 
-## 5. Key Product Requirements
+## 6. Key Product Requirements
 
-### 5.1 Story-first layout
+### 6.1 Story-first layout
 The experience must follow a guided story structure. It should not open with a dense dashboard.
 
 Recommended structure:
@@ -103,25 +123,38 @@ Recommended structure:
 2. Calendar comparison
 3. User prediction moment
 4. Reveal of productivity impact
-5. Interactive simulator
-6. Takeaway / recommendation
+5. Explanation of why the result happened
+6. Interactive simulator
+7. Final takeaway / recommendation
 
-### 5.2 Comparison view
+### 6.2 Comparison view
 Include two fictional worker profiles.
 
-Each profile should show:
+Each profile should show, before the reveal:
 
 - Name
 - Role
 - Total meeting hours
 - Number of meetings
+- Simplified calendar timeline
+
+After the reveal, show:
+
 - Number of context switches
 - Longest focus block
 - Deep work blocks
 - Fragmentation score
 - Estimated productivity score
+- Narrative insight
 
-### 5.3 Interactive simulator
+### 6.3 Prediction interaction
+Before showing productivity scores, the app should ask:
+
+> Who had the more productive day?
+
+The user should choose Alex or Jordan. After the user chooses, the app reveals the hidden metrics and explains the surprising result.
+
+### 6.4 Interactive simulator
 The simulator should let users manipulate variables and see downstream effects.
 
 Minimum controls:
@@ -136,34 +169,39 @@ Recommended outputs:
 
 - Productivity score
 - Fragmentation score
-- Focus time available
-- Context switching cost
+- Context switches
+- Longest focus block
+- Deep work blocks
 - Plain-language interpretation
 
-### 5.4 Narrative callouts
+### 6.5 Narrative callouts
 Use callouts to explain insights in human language.
 
 Examples:
 
+- “The day looked lighter, but felt heavier.”
 - “Four meeting hours can feel heavier than six if they are scattered throughout the day.”
 - “The longest uninterrupted focus block is often a better signal than total meeting hours.”
 - “The goal is not zero meetings. The goal is intentional meetings.”
 
-### 5.5 Visual treatment
+### 6.6 Visual treatment
 The UI should feel like a polished consulting artifact: clear, calm, modern, and presentation-ready.
 
 Recommended style:
 
 - Clean white or warm neutral background
-- Subtle accent color for insight moments
-- Cards with rounded corners
+- Dark text
+- One strong accent color
+- Rounded cards
+- Subtle shadows
 - Timeline/calendar-like visuals
-- Simple charts, not overly technical dashboards
-- Animated reveals where helpful
+- Simple score indicators
+- Smooth reveal animations
+- Clear visual hierarchy
 
 ---
 
-## 6. Data Model
+## 7. Data Model
 
 Use invented data. Accuracy is less important than storytelling clarity.
 
@@ -223,7 +261,7 @@ Fields:
 
 ---
 
-## 7. Suggested Productivity Formula
+## 8. Suggested Productivity Formula
 
 Use a simple transparent formula. It does not need to be scientifically rigorous.
 
@@ -246,15 +284,62 @@ productivityScore = clamp(baseScore - meetingLoadPenalty - contextSwitchPenalty 
 
 ---
 
-## 8. Interaction Requirements
+## 9. Vue Technical Approach
+
+Suggested stack:
+
+- Vue 3
+- Vite
+- TypeScript
+- Tailwind CSS
+- Local JSON data
+- Chart.js, Apache ECharts, or custom lightweight score visuals
+- VueUse optional
+
+The project should use Vue Single File Components and the Composition API.
+
+Avoid unnecessary backend work, authentication, database persistence, or complex state management.
+
+### Recommended file structure
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── HeroSection.vue
+│   ├── WorkerComparison.vue
+│   ├── CalendarTimeline.vue
+│   ├── PredictionReveal.vue
+│   ├── InsightCard.vue
+│   ├── ProductivitySimulator.vue
+│   ├── ScoreMeter.vue
+│   └── TakeawaySection.vue
+│
+├── composables/
+│   ├── useProductivityScoring.ts
+│   └── useNarrativeGenerator.ts
+│
+├── data/
+│   └── meeting-fragmentation-data.json
+│
+├── types/
+│   └── meetingTypes.ts
+│
+├── App.vue
+└── main.ts
+```
+
+---
+
+## 10. Interaction Requirements
 
 ### Required interactions
 
-1. **Prediction toggle**  
+1. **Prediction selection**  
    User chooses which worker they think had the more productive day.
 
 2. **Reveal interaction**  
-   After prediction, show the hidden productivity metrics.
+   After prediction, show hidden productivity metrics.
 
 3. **Scenario controls**  
    User adjusts meeting pattern variables.
@@ -272,23 +357,7 @@ productivityScore = clamp(baseScore - meetingLoadPenalty - contextSwitchPenalty 
 
 ---
 
-## 9. Success Criteria
-
-The project is successful if a reviewer can understand the main point within one minute:
-
-> Meeting hours alone do not explain productivity. Fragmentation and focus-block quality matter more than most people realize.
-
-A strong implementation should:
-
-- Feel like a guided story, not a dashboard
-- Include realistic but simplified fake data
-- Let users interact meaningfully with the narrative
-- Make the surprising insight obvious
-- End with a practical recommendation
-
----
-
-## 10. MVP Scope
+## 11. MVP Scope
 
 ### Must have
 
@@ -304,59 +373,17 @@ A strong implementation should:
 
 - Smooth section transitions
 - Basic responsive design
-- Bar or score visualization
+- Score visualization
 - Calendar block visualization
 - Simple animations
 
 ### Could have
 
-- AI narrator panel
+- AI-style narrator panel
 - Downloadable calendar recommendation
 - Additional personas
 - Team-level view
 - Meeting hygiene recommendations
-
----
-
-## 11. Recommended Tech Approach
-
-Suggested stack:
-
-
-- Vue 3
-- Vite
-- TypeScript
-- Tailwind CSS
-- VueUse (optional)
-- Chart.js or Apache ECharts
-- Local JSON data
-
-The project should use Vue Single File Components (SFCs) and the Composition API.
-
-
-Recommended file structure:
-
-```text
-/src
-├── assets
-├── components
-│   ├── HeroSection.vue
-│   ├── WorkerComparison.vue
-│   ├── CalendarTimeline.vue
-│   ├── PredictionReveal.vue
-│   ├── InsightCard.vue
-│   ├── ProductivitySimulator.vue
-│   ├── TakeawaySection.vue
-│
-├── composables
-│   └── useProductivityScoring.ts
-│
-├── data
-│   └── meeting-fragmentation-data.json
-│
-├── App.vue
-└── main.ts
-```
 
 ---
 
@@ -375,10 +402,27 @@ Use:
 - “The day looked lighter, but felt heavier.”
 - “The problem was not the meetings. It was the gaps between them.”
 - “Focus time works best when it is protected, not sprinkled between calls.”
+- “Meeting hours tell you how full the calendar is. Fragmentation tells you how usable the day is.”
 
 ---
 
-## 13. Demo Script
+## 13. Success Criteria
+
+The project is successful if a reviewer can understand the main point within one minute:
+
+> Meeting hours alone do not explain productivity. Fragmentation and focus-block quality matter more than most people realize.
+
+A strong implementation should:
+
+- Feel like a guided story, not a dashboard
+- Include realistic but simplified fake data
+- Let users interact meaningfully with the narrative
+- Make the surprising insight obvious
+- End with a practical recommendation
+
+---
+
+## 14. Demo Script
 
 1. “This story starts with a familiar assumption: fewer meeting hours equals a better workday.”
 2. “Here are two consultants. Alex has six hours of meetings. Jordan has only four.”
