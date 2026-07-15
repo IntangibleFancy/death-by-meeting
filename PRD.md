@@ -406,7 +406,25 @@ Use:
 
 ---
 
-## 13. Success Criteria
+
+## 13. Deployment Requirements
+
+The application will be deployed to Vercel.
+
+Requirements:
+
+- Static deployment
+- No backend services
+- No database
+- No server-side rendering required
+- No environment variables required
+- Build successfully with `npm run build`
+
+The project should be deployable by connecting the GitHub repository directly to Vercel.
+
+---
+
+## 14. Success Criteria
 
 The project is successful if a reviewer can understand the main point within one minute:
 
@@ -422,7 +440,7 @@ A strong implementation should:
 
 ---
 
-## 14. Demo Script
+## 15. Demo Script
 
 1. “This story starts with a familiar assumption: fewer meeting hours equals a better workday.”
 2. “Here are two consultants. Alex has six hours of meetings. Jordan has only four.”

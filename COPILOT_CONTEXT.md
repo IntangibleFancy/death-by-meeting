@@ -1,7 +1,7 @@
 # COPILOT_CONTEXT.md
 # GitHub Copilot Context: The Productivity Paradox
 
-You are helping build an interactive data story for an AI upskill course assignment called P302 — Interactive Data Story.
+You are helping build an interactive data story.
 
 ## Product Intent
 
