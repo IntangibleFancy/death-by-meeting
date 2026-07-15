@@ -20,7 +20,7 @@ defineProps<{
     <!-- Number + icon row -->
     <div class="flex items-start justify-between gap-4">
       <span class="font-display text-5xl leading-none text-ink/12 select-none">{{ number }}</span>
-      <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+      <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded bg-accent/10 text-accent">
         <slot name="icon" />
       </div>
     </div>
@@ -31,7 +31,7 @@ defineProps<{
       <p class="mt-4 flex-1 text-base leading-7 text-ink/65">{{ body }}</p>
 
       <!-- Callout -->
-      <div class="mt-6 rounded-xl bg-canvas px-5 py-4">
+      <div class="mt-6 rounded bg-canvas px-5 py-4">
         <p class="text-sm font-semibold italic leading-6 text-ink/80">
           "{{ callout }}"
         </p>

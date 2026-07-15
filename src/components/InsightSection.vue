@@ -121,7 +121,9 @@ const insights = [
         </p>
       </div>
       <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-ink/45 flex-shrink-0">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 bg-white text-base text-accent">↓</span>
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 bg-white text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="14"/><polyline points="4 10 8 14 12 10"/></svg>
+          </span>
         <span>The simulator is next</span>
       </div>
     </div>

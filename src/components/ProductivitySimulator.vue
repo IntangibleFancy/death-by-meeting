@@ -74,7 +74,7 @@ function formatFocusBlock(minutes: number): string {
               type="button"
               @click="meetingPattern = 'scattered'"
               :class="[
-                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ember',
+                'rounded px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ember',
                 meetingPattern === 'scattered'
                   ? 'bg-ember text-white shadow-sm'
                   : 'bg-canvas text-ink/65 hover:bg-mist'
@@ -86,7 +86,7 @@ function formatFocusBlock(minutes: number): string {
               type="button"
               @click="meetingPattern = 'clustered'"
               :class="[
-                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent',
+                'rounded px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent',
                 meetingPattern === 'clustered'
                   ? 'bg-accent text-white shadow-sm'
                   : 'bg-canvas text-ink/65 hover:bg-mist'
@@ -196,28 +196,28 @@ function formatFocusBlock(minutes: number): string {
 
             <!-- Metric tiles -->
             <div class="grid grid-cols-2 gap-3 self-center">
-              <div class="rounded-xl bg-canvas px-4 py-3.5">
+              <div class="rounded bg-canvas px-4 py-3.5">
                 <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Fragmentation</p>
                 <p :class="['mt-1 font-display text-2xl transition-colors duration-300', outputs.fragmentationScore >= 65 ? 'text-ember' : 'text-accent']">
                   {{ outputs.fragmentationScore }}
                 </p>
               </div>
 
-              <div class="rounded-xl bg-canvas px-4 py-3.5">
+              <div class="rounded bg-canvas px-4 py-3.5">
                 <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Context switches</p>
                 <p :class="['mt-1 font-display text-2xl transition-colors duration-300', outputs.contextSwitches >= 12 ? 'text-ember' : 'text-ink']">
                   {{ outputs.contextSwitches }}
                 </p>
               </div>
 
-              <div class="rounded-xl bg-canvas px-4 py-3.5">
+              <div class="rounded bg-canvas px-4 py-3.5">
                 <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Longest focus</p>
                 <p :class="['mt-1 font-display text-2xl transition-colors duration-300', outputs.longestFocusBlockMinutes >= 90 ? 'text-accent' : 'text-ember']">
                   {{ formatFocusBlock(outputs.longestFocusBlockMinutes) }}
                 </p>
               </div>
 
-              <div class="rounded-xl bg-canvas px-4 py-3.5">
+              <div class="rounded bg-canvas px-4 py-3.5">
                 <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Deep work blocks</p>
                 <p :class="['mt-1 font-display text-2xl transition-colors duration-300', outputs.deepWorkBlocks > 0 ? 'text-accent' : 'text-ember']">
                   {{ outputs.deepWorkBlocks }}
@@ -227,7 +227,7 @@ function formatFocusBlock(minutes: number): string {
           </div>
 
           <!-- Meeting hours row -->
-          <div class="mt-5 rounded-xl bg-canvas px-5 py-3.5">
+          <div class="mt-5 rounded bg-canvas px-5 py-3.5">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Effective meeting hours</p>
             <p class="mt-1 font-display text-2xl text-ink">{{ outputs.meetingHours }}h</p>
           </div>

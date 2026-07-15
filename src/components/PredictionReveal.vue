@@ -116,7 +116,7 @@ const scoreBands = [
 
         <!-- Secondary metrics -->
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <div class="rounded-xl bg-canvas p-4">
+          <div class="rounded bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Fragmentation</p>
             <p :class="['mt-1 font-display text-2xl', profile.fragmentationScore >= 65 ? 'text-ember' : 'text-accent']">
               {{ profile.fragmentationScore }}
@@ -130,21 +130,21 @@ const scoreBands = [
             </div>
           </div>
 
-          <div class="rounded-xl bg-canvas p-4">
+          <div class="rounded bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Context switches</p>
             <p :class="['mt-1 font-display text-2xl', profile.contextSwitches >= 12 ? 'text-ember' : 'text-ink']">
               {{ profile.contextSwitches }}
             </p>
           </div>
 
-          <div class="rounded-xl bg-canvas p-4">
+          <div class="rounded bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Longest focus</p>
             <p :class="['mt-1 font-display text-2xl', profile.longestFocusBlockMinutes >= 90 ? 'text-accent' : 'text-ember']">
               {{ formatFocusBlock(profile.longestFocusBlockMinutes) }}
             </p>
           </div>
 
-          <div class="rounded-xl bg-canvas p-4">
+          <div class="rounded bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Deep work blocks</p>
             <p :class="['mt-1 font-display text-2xl', profile.deepWorkBlocks > 0 ? 'text-accent' : 'text-ember']">
               {{ profile.deepWorkBlocks }}

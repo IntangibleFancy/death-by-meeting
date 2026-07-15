@@ -77,11 +77,11 @@ function predictedProfile() {
 
         <!-- Stats — no productivity score shown -->
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <div class="rounded-xl bg-canvas px-4 py-3.5">
+          <div class="rounded bg-canvas px-4 py-3.5">
             <p class="font-display text-3xl text-ink">{{ profile.meetingHours }}h</p>
             <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">Meeting hours</p>
           </div>
-          <div class="rounded-xl bg-canvas px-4 py-3.5">
+          <div class="rounded bg-canvas px-4 py-3.5">
             <p class="font-display text-3xl text-ink">{{ profile.meetingCount }}</p>
             <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">Meetings</p>
           </div>
@@ -115,7 +115,7 @@ function predictedProfile() {
             v-for="profile in profiles"
             :key="profile.id"
             @click="choose(profile.id)"
-            class="w-full rounded-xl bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:w-auto sm:min-w-[14rem] cursor-pointer"
+            class="w-full rounded bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:w-auto sm:min-w-[14rem] cursor-pointer"
           >
             {{ profile.name }}
           </button>
@@ -138,7 +138,9 @@ function predictedProfile() {
           The data is ready. Keep reading to see whether your intuition was right — the reveal shows what meeting hours alone will never tell you.
         </p>
         <div class="mt-7 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-ink/45">
-          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 bg-white text-base text-accent">↓</span>
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 bg-white text-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="14"/><polyline points="4 10 8 14 12 10"/></svg>
+            </span>
           <span>The reveal is next</span>
         </div>
       </template>

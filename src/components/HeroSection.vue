@@ -43,7 +43,7 @@ defineProps<{
             {{ thesis }}
           </p>
 
-          <div class="mt-6 rounded-[1.5rem] bg-ink px-5 py-4 text-white">
+          <div class="mt-6 rounded-[0.25rem] bg-ink px-5 py-4 text-white">
             <p class="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Why this matters</p>
             <p class="mt-3 text-lg leading-7">
               {{ callout }}
@@ -53,7 +53,9 @@ defineProps<{
       </div>
 
       <div class="mt-12 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.24em] text-ink/55">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-lg text-accent motion-safe:animate-bounce">↓</span>
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-accent motion-safe:animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="2" x2="8" y2="14"/><polyline points="4 10 8 14 12 10"/></svg>
+          </span>
         <p>Scroll to compare the calendars</p>
       </div>
     </div>
