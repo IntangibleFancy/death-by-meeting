@@ -51,3 +51,27 @@ export interface SimulationScenario {
     interpretation: string;
   };
 }
+
+export interface RecommendedInsight {
+  title: string;
+  body: string;
+}
+
+export interface ProjectMetadata {
+  title: string;
+  subtitle: string;
+  workingTitle: string;
+  industry: string;
+  audience: string;
+  thesis: string;
+  primaryTakeaway: string;
+}
+
+export interface ProjectData {
+  project: ProjectMetadata;
+  workerProfiles: WorkerProfile[];
+  workdaySchedules: WorkdaySchedule[];
+  simulationScenarios: SimulationScenario[];
+  storyCallouts: string[];
+  recommendedInsights: RecommendedInsight[];
+}
