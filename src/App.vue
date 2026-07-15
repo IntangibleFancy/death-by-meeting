@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, nextTick } from 'vue';
 import HeroSection from './components/HeroSection.vue';
 import WorkerComparison from './components/WorkerComparison.vue';
+import PredictionReveal from './components/PredictionReveal.vue';
+import InsightSection from './components/InsightSection.vue';
 import meetingData from './data/meeting-fragmentation-data.json';
 import type { ProjectData } from './types/meetingTypes';
 
 const storyData = meetingData as ProjectData;
 const prediction = ref<string | null>(null);
 
-function handlePrediction(profileId: string) {
+async function handlePrediction(profileId: string) {
   prediction.value = profileId;
+  await nextTick();
+  document.getElementById('reveal')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
 
@@ -31,5 +35,13 @@ function handlePrediction(profileId: string) {
       :prediction="prediction"
       @predict="handlePrediction"
     />
+
+    <PredictionReveal
+      v-if="prediction !== null"
+      :profiles="storyData.workerProfiles"
+      :prediction="prediction"
+    />
+
+    <InsightSection v-if="prediction !== null" />
   </div>
 </template>
