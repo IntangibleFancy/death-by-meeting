@@ -45,14 +45,16 @@ const colorClass: Record<EventType, string> = {
 <template>
   <div class="select-none">
     <!-- Timeline bar -->
-    <div class="relative h-10 w-full overflow-hidden rounded-xl bg-mist/80">
+    <div class="relative h-10 w-full overflow-hidden rounded bg-mist/80">
+      <div class="absolute inset-0 mx-1">
       <div
         v-for="event in positionedEvents"
         :key="event.id"
         :title="`${event.label} (${event.durationMin} min)`"
-        :class="['absolute top-1 bottom-1 rounded-lg', colorClass[event.type]]"
+        :class="['absolute top-1 bottom-1 rounded-md', colorClass[event.type]]"
         :style="{ left: event.left, width: event.width }"
       />
+      </div>
     </div>
 
     <!-- Hour labels -->
