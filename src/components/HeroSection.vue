@@ -57,7 +57,7 @@ defineProps<{
       </div>
 
       <div class="mt-12 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.24em] text-ink/55">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-lg text-accent">↓</span>
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-lg text-accent motion-safe:animate-bounce">↓</span>
         <p>Scroll to compare the calendars in the next phase of the story</p>
       </div>
     </div>

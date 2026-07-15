@@ -7,6 +7,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
   }
 
   body {
@@ -20,6 +21,25 @@
 
   ::selection {
     @apply bg-accent/20 text-ink;
+  }
+
+  /* Global focus-visible ring — consistent across all interactive elements */
+  :focus-visible {
+    outline: 2px solid #1f6f78;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+/* Respect user motion preferences — disables all transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

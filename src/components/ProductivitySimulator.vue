@@ -74,7 +74,7 @@ function formatFocusBlock(minutes: number): string {
               type="button"
               @click="meetingPattern = 'scattered'"
               :class="[
-                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer',
+                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ember',
                 meetingPattern === 'scattered'
                   ? 'bg-ember text-white shadow-sm'
                   : 'bg-canvas text-ink/65 hover:bg-mist'
@@ -86,7 +86,7 @@ function formatFocusBlock(minutes: number): string {
               type="button"
               @click="meetingPattern = 'clustered'"
               :class="[
-                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer',
+                'rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent',
                 meetingPattern === 'clustered'
                   ? 'bg-accent text-white shadow-sm'
                   : 'bg-canvas text-ink/65 hover:bg-mist'
@@ -168,7 +168,7 @@ function formatFocusBlock(minutes: number): string {
             type="button"
             @click="protectedFocusBlock = !protectedFocusBlock"
             :class="[
-              'relative mt-0.5 flex h-7 w-12 flex-shrink-0 items-center rounded-full transition-colors duration-300 cursor-pointer',
+              'relative mt-0.5 flex h-7 w-12 flex-shrink-0 items-center rounded-full transition-colors duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2',
               protectedFocusBlock ? 'bg-accent' : 'bg-ink/20'
             ]"
             :aria-pressed="protectedFocusBlock"

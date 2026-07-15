@@ -58,9 +58,12 @@ const colorClass: Record<EventType, string> = {
     <!-- Hour labels -->
     <div class="relative mt-1.5 h-4">
       <span
-        v-for="marker in hourMarkers"
+        v-for="(marker, i) in hourMarkers"
         :key="marker.label"
-        class="absolute -translate-x-1/2 text-[10px] font-medium text-ink/40"
+        :class="[
+          'absolute text-[10px] font-medium text-ink/40',
+          i === 0 ? '' : i === hourMarkers.length - 1 ? '-translate-x-full' : '-translate-x-1/2'
+        ]"
         :style="{ left: `${marker.pos}%` }"
       >
         {{ marker.label }}

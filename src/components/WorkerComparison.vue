@@ -115,7 +115,7 @@ function predictedProfile() {
             v-for="profile in profiles"
             :key="profile.id"
             @click="choose(profile.id)"
-            class="w-full rounded-2xl bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 sm:w-auto sm:min-w-[14rem] cursor-pointer"
+            class="w-full rounded-2xl bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:w-auto sm:min-w-[14rem] cursor-pointer"
           >
             {{ profile.name }}
           </button>
