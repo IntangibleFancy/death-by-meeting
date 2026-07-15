@@ -49,7 +49,7 @@ function predictedProfile() {
         v-for="profile in profiles"
         :key="profile.id"
         :class="[
-          'rounded-[2rem] border bg-white p-6 shadow-card transition-all duration-300 sm:p-8',
+          'rounded-xl border bg-white p-6 shadow-card transition-all duration-300 sm:p-8',
           prediction === profile.id
             ? 'border-accent ring-2 ring-accent/20'
             : prediction !== null
@@ -77,11 +77,11 @@ function predictedProfile() {
 
         <!-- Stats — no productivity score shown -->
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <div class="rounded-2xl bg-canvas px-4 py-3.5">
+          <div class="rounded-xl bg-canvas px-4 py-3.5">
             <p class="font-display text-3xl text-ink">{{ profile.meetingHours }}h</p>
             <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">Meeting hours</p>
           </div>
-          <div class="rounded-2xl bg-canvas px-4 py-3.5">
+          <div class="rounded-xl bg-canvas px-4 py-3.5">
             <p class="font-display text-3xl text-ink">{{ profile.meetingCount }}</p>
             <p class="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">Meetings</p>
           </div>
@@ -99,7 +99,7 @@ function predictedProfile() {
     </div>
 
     <!-- Prediction prompt -->
-    <div class="mt-8 rounded-[2rem] border border-ink/10 bg-white/80 p-8 text-center shadow-card backdrop-blur-sm">
+    <div class="mt-8 rounded-xl border border-ink/10 bg-white/80 p-8 text-center shadow-card backdrop-blur-sm">
 
       <!-- Before prediction -->
       <template v-if="prediction === null">
@@ -115,7 +115,7 @@ function predictedProfile() {
             v-for="profile in profiles"
             :key="profile.id"
             @click="choose(profile.id)"
-            class="w-full rounded-2xl bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:w-auto sm:min-w-[14rem] cursor-pointer"
+            class="w-full rounded-xl bg-ink px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-accent hover:shadow-lg active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 sm:w-auto sm:min-w-[14rem] cursor-pointer"
           >
             {{ profile.name }}
           </button>

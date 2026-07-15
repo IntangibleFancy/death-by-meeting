@@ -70,7 +70,7 @@ const recommendations = [
         v-for="(rec, i) in recommendations"
         :key="rec.action"
         :class="[
-          'rounded-[2rem] border border-ink/10 bg-white p-6 shadow-card transition-all duration-700 sm:p-8',
+          'rounded-xl border border-ink/10 bg-white p-6 shadow-card transition-all duration-700 sm:p-8',
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         ]"
         :style="{ transitionDelay: `${rec.delay}ms` }"
@@ -92,7 +92,7 @@ const recommendations = [
     <!-- Closing conclusion card ────────────────────────────────────────────── -->
     <div
       :class="[
-        'mt-8 overflow-hidden rounded-[2rem] bg-ink shadow-card transition-all duration-700',
+        'mt-8 overflow-hidden rounded-xl bg-ink shadow-card transition-all duration-700',
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       ]"
       style="transition-delay: 680ms"

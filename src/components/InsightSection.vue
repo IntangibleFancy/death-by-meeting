@@ -109,7 +109,7 @@ const insights = [
     <!-- Bridge callout toward simulator -->
     <div
       :class="[
-        'mt-8 flex flex-col items-start gap-5 rounded-[2rem] border border-ink/10 bg-white/70 p-7 backdrop-blur-sm transition-all duration-700 sm:flex-row sm:items-center sm:justify-between',
+        'mt-8 flex flex-col items-start gap-5 rounded-xl border border-ink/10 bg-white/70 p-7 backdrop-blur-sm transition-all duration-700 sm:flex-row sm:items-center sm:justify-between',
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       ]"
       style="transition-delay: 560ms"

@@ -79,7 +79,7 @@ const scoreBands = [
         v-for="(profile, i) in orderedProfiles"
         :key="profile.id"
         :class="[
-          'rounded-[2rem] border p-6 shadow-card transition-all duration-700 sm:p-8',
+          'rounded-xl border p-6 shadow-card transition-all duration-700 sm:p-8',
           profile.id === winner.id
             ? 'border-accent bg-white ring-2 ring-accent/20'
             : 'border-ink/10 bg-white',
@@ -116,7 +116,7 @@ const scoreBands = [
 
         <!-- Secondary metrics -->
         <div class="mt-6 grid grid-cols-2 gap-3">
-          <div class="rounded-2xl bg-canvas p-4">
+          <div class="rounded-xl bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Fragmentation</p>
             <p :class="['mt-1 font-display text-2xl', profile.fragmentationScore >= 65 ? 'text-ember' : 'text-accent']">
               {{ profile.fragmentationScore }}
@@ -130,21 +130,21 @@ const scoreBands = [
             </div>
           </div>
 
-          <div class="rounded-2xl bg-canvas p-4">
+          <div class="rounded-xl bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Context switches</p>
             <p :class="['mt-1 font-display text-2xl', profile.contextSwitches >= 12 ? 'text-ember' : 'text-ink']">
               {{ profile.contextSwitches }}
             </p>
           </div>
 
-          <div class="rounded-2xl bg-canvas p-4">
+          <div class="rounded-xl bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Longest focus</p>
             <p :class="['mt-1 font-display text-2xl', profile.longestFocusBlockMinutes >= 90 ? 'text-accent' : 'text-ember']">
               {{ formatFocusBlock(profile.longestFocusBlockMinutes) }}
             </p>
           </div>
 
-          <div class="rounded-2xl bg-canvas p-4">
+          <div class="rounded-xl bg-canvas p-4">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-ink/45">Deep work blocks</p>
             <p :class="['mt-1 font-display text-2xl', profile.deepWorkBlocks > 0 ? 'text-accent' : 'text-ember']">
               {{ profile.deepWorkBlocks }}
@@ -160,7 +160,7 @@ const scoreBands = [
     <!-- Narrative callout ───────────────────────────────────────────────────── -->
     <div
       :class="[
-        'mt-8 rounded-[2rem] bg-ink p-8 shadow-card transition-all duration-700',
+        'mt-8 rounded-xl bg-ink p-8 shadow-card transition-all duration-700',
         revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       ]"
       style="transition-delay: 560ms"
@@ -185,7 +185,7 @@ const scoreBands = [
     <!-- Score bands key ─────────────────────────────────────────────────────── -->
     <div
       :class="[
-        'mt-6 rounded-[2rem] border border-ink/10 bg-white/70 p-6 backdrop-blur-sm transition-all duration-700 sm:p-8',
+        'mt-6 rounded-xl border border-ink/10 bg-white/70 p-6 backdrop-blur-sm transition-all duration-700 sm:p-8',
         revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       ]"
       style="transition-delay: 720ms"

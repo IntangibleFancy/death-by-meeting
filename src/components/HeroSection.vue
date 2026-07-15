@@ -35,7 +35,7 @@ defineProps<{
           </div>
         </div>
 
-        <aside class="rounded-[2rem] border border-ink/10 bg-white/80 p-6 shadow-card backdrop-blur-sm">
+        <aside class="rounded-xl border border-ink/10 bg-white/80 p-6 shadow-card backdrop-blur-sm">
           <p class="text-sm font-semibold uppercase tracking-[0.22em] text-ember">Core thesis</p>
           <p class="mt-4 font-display text-3xl leading-tight text-ink">
             The least busy calendar can still be the least productive.
