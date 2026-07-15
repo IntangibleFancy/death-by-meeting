@@ -1,6 +1,6 @@
 # Component Brief: Death by Meetings
 
-Use this file as implementation context for GitHub Copilot.
+Use this file as implementation context.
 
 ## Overall experience
 Build a single-page interactive data story. The page should guide the user through a narrative about meeting fragmentation. It should feel like a polished product demo, not a generic analytics dashboard.

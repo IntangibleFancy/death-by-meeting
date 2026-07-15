@@ -1,6 +1,6 @@
-# GitHub Copilot Context: Death by Meetings
+# Context: Death by Meetings
 
-You are helping build an interactive data story for an AI upskill course assignment called P302 — Interactive Data Story.
+You are helping build an interactive data story.
 
 ## Product intent
 This is not a dashboard. It is a story-driven web experience that helps users understand a surprising pattern in invented data.
@@ -37,15 +37,50 @@ Use local fake JSON data. Do not fetch from an API.
 - Real employee data
 - Overbuilding authentication, backend, or persistence
 
-## Preferred component architecture
-- `Hero`
-- `ProfileComparison`
-- `CalendarStrip`
-- `PredictionReveal`
-- `InsightCard`
-- `Simulator`
-- `ScoreMeter`
-- `Takeaway`
+## Preferred Vue architecture
+
+Use Vue 3 Composition API.
+
+Primary components:
+
+- HeroSection.vue
+- WorkerComparison.vue
+- CalendarTimeline.vue
+- PredictionReveal.vue
+- ProductivitySimulator.vue
+- InsightCard.vue
+- TakeawaySection.vue
+
+Business logic should be extracted into composables where appropriate:
+
+- useProductivityScoring.ts
+- useSimulator.ts
+
+Use reactive state and computed properties rather than prop drilling whenever practical.
+
+
+## Vue Development Guidelines
+
+Use Vue 3 with Composition API.
+
+Prefer:
+
+- script setup syntax
+- ref()
+- computed()
+- watch()
+
+Avoid:
+
+- Options API
+- Vuex
+- Overly complex state management
+
+Data should be loaded from local JSON files and passed through reusable components.
+
+The UI should remain highly presentational and story-focused.
+`
+
 
 ## Scoring model
 Use a transparent simplified model. The score does not need to be scientifically validated. It only needs to support the story.

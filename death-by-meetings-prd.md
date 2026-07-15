@@ -3,7 +3,6 @@
 ## 1. Product Summary
 
 **Project name:** Death by Meetings  
-**Assignment:** P302 — Interactive Data Story  
 **Industry:** Professional Services / Knowledge Work / Consulting Operations  
 **Audience:** Knowledge workers, consultants, delivery leads, people managers, and operations leaders  
 **Format:** Interactive web-based data story  
@@ -323,29 +322,40 @@ A strong implementation should:
 
 Suggested stack:
 
-- React or Next.js
-- TypeScript if comfortable
+
+- Vue 3
+- Vite
+- TypeScript
 - Tailwind CSS
-- Recharts or simple custom chart components
-- Local JSON file for fake data
-- Framer Motion for subtle animation, if available
+- VueUse (optional)
+- Chart.js or Apache ECharts
+- Local JSON data
+
+The project should use Vue Single File Components (SFCs) and the Composition API.
+
 
 Recommended file structure:
 
 ```text
 /src
-  /components
-    Hero.tsx
-    CalendarComparison.tsx
-    PredictionReveal.tsx
-    Simulator.tsx
-    InsightCard.tsx
-    Takeaway.tsx
-  /data
-    meeting-fragmentation-data.json
-  /lib
-    scoring.ts
-  App.tsx
+├── assets
+├── components
+│   ├── HeroSection.vue
+│   ├── WorkerComparison.vue
+│   ├── CalendarTimeline.vue
+│   ├── PredictionReveal.vue
+│   ├── InsightCard.vue
+│   ├── ProductivitySimulator.vue
+│   ├── TakeawaySection.vue
+│
+├── composables
+│   └── useProductivityScoring.ts
+│
+├── data
+│   └── meeting-fragmentation-data.json
+│
+├── App.vue
+└── main.ts
 ```
 
 ---
