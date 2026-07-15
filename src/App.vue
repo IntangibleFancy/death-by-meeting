@@ -5,6 +5,7 @@ import WorkerComparison from './components/WorkerComparison.vue';
 import PredictionReveal from './components/PredictionReveal.vue';
 import InsightSection from './components/InsightSection.vue';
 import ProductivitySimulator from './components/ProductivitySimulator.vue';
+import TakeawaySection from './components/TakeawaySection.vue';
 import meetingData from './data/meeting-fragmentation-data.json';
 import type { ProjectData } from './types/meetingTypes';
 
@@ -46,5 +47,7 @@ async function handlePrediction(profileId: string) {
     <InsightSection v-if="prediction !== null" />
 
     <ProductivitySimulator v-if="prediction !== null" />
+
+    <TakeawaySection v-if="prediction !== null" />
   </div>
 </template>
