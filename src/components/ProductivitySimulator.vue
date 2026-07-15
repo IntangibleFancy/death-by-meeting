@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue';
 import { useProductivityScoring } from '../composables/useProductivityScoring';
 import type { SimulatorInputs } from '../composables/useProductivityScoring';
+import { useNarrativeGenerator } from '../composables/useNarrativeGenerator';
 import ScoreMeter from './ScoreMeter.vue';
 
 const { calculateMeetingImpact } = useProductivityScoring();
@@ -22,6 +23,18 @@ const inputs = computed<SimulatorInputs>(() => ({
 }));
 
 const outputs = computed(() => calculateMeetingImpact(inputs.value));
+
+const { generateNarrative } = useNarrativeGenerator();
+
+const narrative = computed(() => generateNarrative({
+  productivityScore: outputs.value.productivityScore,
+  fragmentationScore: outputs.value.fragmentationScore,
+  contextSwitches: outputs.value.contextSwitches,
+  longestFocusBlockMinutes: outputs.value.longestFocusBlockMinutes,
+  deepWorkBlocks: outputs.value.deepWorkBlocks,
+  meetingPattern: meetingPattern.value,
+  protectedFocusBlock: protectedFocusBlock.value,
+}));
 
 function formatFocusBlock(minutes: number): string {
   if (minutes >= 60) {
@@ -224,7 +237,7 @@ function formatFocusBlock(minutes: number): string {
         <div class="rounded-[2rem] bg-ink p-7 shadow-card">
           <p class="text-xs font-bold uppercase tracking-[0.28em] text-white/45">Reading this day</p>
           <p class="mt-4 text-base leading-8 text-white/85">
-            {{ outputs.interpretation }}
+            {{ narrative }}
           </p>
         </div>
 
