@@ -1,0 +1,295 @@
+{
+  "project": {
+    "title": "Death by Meetings",
+    "subtitle": "Why the least busy calendar can still be the least productive",
+    "industry": "Professional Services / Knowledge Work",
+    "audience": "Knowledge workers, consultants, managers, and operations leaders",
+    "thesis": "Total meeting hours are not the full story. Meeting fragmentation and context switching often explain why a lighter calendar can still feel exhausting.",
+    "primaryTakeaway": "Protect uninterrupted focus blocks and cluster necessary meetings instead of only trying to reduce total meeting hours."
+  },
+  "workerProfiles": [
+    {
+      "id": "alex",
+      "name": "Alex",
+      "role": "Senior Consultant",
+      "summary": "Alex has a meeting-heavy day, but most meetings are clustered into two blocks, leaving one meaningful stretch of focus time.",
+      "meetingHours": 6.0,
+      "meetingCount": 7,
+      "contextSwitches": 8,
+      "longestFocusBlockMinutes": 150,
+      "deepWorkBlocks": 1,
+      "fragmentationScore": 42,
+      "productivityScore": 68,
+      "calendarPattern": "clustered",
+      "insight": "Alex looks busier on paper, but the clustered meeting pattern preserves a real focus block."
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "role": "Experience Designer",
+      "summary": "Jordan has fewer meeting hours, but the meetings are scattered across the day, creating repeated context switching and shallow work windows.",
+      "meetingHours": 4.0,
+      "meetingCount": 9,
+      "contextSwitches": 16,
+      "longestFocusBlockMinutes": 45,
+      "deepWorkBlocks": 0,
+      "fragmentationScore": 78,
+      "productivityScore": 44,
+      "calendarPattern": "scattered",
+      "insight": "Jordan has fewer meeting hours, but almost no uninterrupted time long enough for deep work."
+    }
+  ],
+  "workdaySchedules": [
+    {
+      "profileId": "alex",
+      "dayStart": "09:00",
+      "dayEnd": "17:00",
+      "events": [
+        {
+          "id": "a1",
+          "type": "meeting",
+          "label": "Client standup",
+          "start": "09:00",
+          "end": "09:30",
+          "energyImpact": -1
+        },
+        {
+          "id": "a2",
+          "type": "meeting",
+          "label": "Delivery planning",
+          "start": "09:30",
+          "end": "10:30",
+          "energyImpact": -2
+        },
+        {
+          "id": "a3",
+          "type": "meeting",
+          "label": "Design review",
+          "start": "10:30",
+          "end": "11:30",
+          "energyImpact": -2
+        },
+        {
+          "id": "a4",
+          "type": "lunch",
+          "label": "Lunch",
+          "start": "11:30",
+          "end": "12:00",
+          "energyImpact": 1
+        },
+        {
+          "id": "a5",
+          "type": "focus",
+          "label": "Deep work block",
+          "start": "12:00",
+          "end": "14:30",
+          "energyImpact": 3
+        },
+        {
+          "id": "a6",
+          "type": "meeting",
+          "label": "Stakeholder sync",
+          "start": "14:30",
+          "end": "15:30",
+          "energyImpact": -2
+        },
+        {
+          "id": "a7",
+          "type": "meeting",
+          "label": "Working session",
+          "start": "15:30",
+          "end": "17:00",
+          "energyImpact": -3
+        }
+      ]
+    },
+    {
+      "profileId": "jordan",
+      "dayStart": "09:00",
+      "dayEnd": "17:00",
+      "events": [
+        {
+          "id": "j1",
+          "type": "meeting",
+          "label": "Team check-in",
+          "start": "09:00",
+          "end": "09:30",
+          "energyImpact": -1
+        },
+        {
+          "id": "j2",
+          "type": "focus",
+          "label": "Short work window",
+          "start": "09:30",
+          "end": "10:00",
+          "energyImpact": 1
+        },
+        {
+          "id": "j3",
+          "type": "meeting",
+          "label": "Client question",
+          "start": "10:00",
+          "end": "10:30",
+          "energyImpact": -1
+        },
+        {
+          "id": "j4",
+          "type": "admin",
+          "label": "Email catch-up",
+          "start": "10:30",
+          "end": "11:00",
+          "energyImpact": 0
+        },
+        {
+          "id": "j5",
+          "type": "meeting",
+          "label": "Design critique",
+          "start": "11:00",
+          "end": "12:00",
+          "energyImpact": -2
+        },
+        {
+          "id": "j6",
+          "type": "lunch",
+          "label": "Lunch",
+          "start": "12:00",
+          "end": "12:30",
+          "energyImpact": 1
+        },
+        {
+          "id": "j7",
+          "type": "meeting",
+          "label": "Project sync",
+          "start": "12:30",
+          "end": "13:00",
+          "energyImpact": -1
+        },
+        {
+          "id": "j8",
+          "type": "focus",
+          "label": "Short work window",
+          "start": "13:00",
+          "end": "13:45",
+          "energyImpact": 1
+        },
+        {
+          "id": "j9",
+          "type": "meeting",
+          "label": "Review prep",
+          "start": "13:45",
+          "end": "14:15",
+          "energyImpact": -1
+        },
+        {
+          "id": "j10",
+          "type": "admin",
+          "label": "Slack and follow-ups",
+          "start": "14:15",
+          "end": "15:00",
+          "energyImpact": 0
+        },
+        {
+          "id": "j11",
+          "type": "meeting",
+          "label": "Internal sync",
+          "start": "15:00",
+          "end": "15:30",
+          "energyImpact": -1
+        },
+        {
+          "id": "j12",
+          "type": "focus",
+          "label": "Short work window",
+          "start": "15:30",
+          "end": "16:00",
+          "energyImpact": 1
+        },
+        {
+          "id": "j13",
+          "type": "meeting",
+          "label": "End-of-day handoff",
+          "start": "16:00",
+          "end": "17:00",
+          "energyImpact": -2
+        }
+      ]
+    }
+  ],
+  "simulationScenarios": [
+    {
+      "id": "baseline-scattered",
+      "name": "Baseline: scattered meetings",
+      "meetingPattern": "scattered",
+      "meetingCount": 8,
+      "averageMeetingLengthMinutes": 30,
+      "asyncReplacementRate": 0,
+      "protectedFocusBlock": false,
+      "outputs": {
+        "meetingHours": 4.0,
+        "contextSwitches": 15,
+        "longestFocusBlockMinutes": 45,
+        "deepWorkBlocks": 0,
+        "fragmentationScore": 76,
+        "productivityScore": 43,
+        "interpretation": "The calendar has fewer meeting hours, but the day is chopped into small pieces. Most focus windows are too short for meaningful work."
+      }
+    },
+    {
+      "id": "clustered-meetings",
+      "name": "Clustered meetings",
+      "meetingPattern": "clustered",
+      "meetingCount": 8,
+      "averageMeetingLengthMinutes": 30,
+      "asyncReplacementRate": 0,
+      "protectedFocusBlock": false,
+      "outputs": {
+        "meetingHours": 4.0,
+        "contextSwitches": 8,
+        "longestFocusBlockMinutes": 150,
+        "deepWorkBlocks": 1,
+        "fragmentationScore": 44,
+        "productivityScore": 66,
+        "interpretation": "The total meeting time stayed the same, but clustering meetings created one usable deep work block."
+      }
+    },
+    {
+      "id": "async-plus-focus",
+      "name": "Async replacement + protected focus",
+      "meetingPattern": "clustered",
+      "meetingCount": 6,
+      "averageMeetingLengthMinutes": 30,
+      "asyncReplacementRate": 25,
+      "protectedFocusBlock": true,
+      "outputs": {
+        "meetingHours": 3.0,
+        "contextSwitches": 6,
+        "longestFocusBlockMinutes": 180,
+        "deepWorkBlocks": 2,
+        "fragmentationScore": 28,
+        "productivityScore": 82,
+        "interpretation": "Replacing some meetings with async updates and protecting focus time creates a strong focus day without eliminating collaboration."
+      }
+    }
+  ],
+  "storyCallouts": [
+    "The day looked lighter, but felt heavier.",
+    "Meeting hours tell you how full the calendar is. Fragmentation tells you how usable the day is.",
+    "A 45-minute gap often becomes email cleanup, not deep work.",
+    "The goal is not zero meetings. The goal is intentional meetings.",
+    "Protecting one long focus block can matter more than removing one short meeting."
+  ],
+  "recommendedInsights": [
+    {
+      "title": "Total meeting hours are a blunt metric",
+      "body": "Two people can have very different productivity experiences with similar or even inverted meeting loads."
+    },
+    {
+      "title": "Fragmentation creates hidden work",
+      "body": "Every switch between meeting mode and production mode creates re-entry cost."
+    },
+    {
+      "title": "Focus blocks are the scarce resource",
+      "body": "The most important metric is not just how much time is free, but whether free time is long enough to use."
+    }
+  ]
+}
