@@ -116,7 +116,7 @@ const recommendations = [
       <div class="border-t border-white/10 px-8 py-5 sm:px-12">
         <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p class="text-xs font-semibold uppercase tracking-[0.22em] text-white/35">The Productivity Paradox</p>
-          <p class="text-xs font-medium text-white/30">P302 — Interactive Data Story</p>
+          
         </div>
       </div>
     </div>

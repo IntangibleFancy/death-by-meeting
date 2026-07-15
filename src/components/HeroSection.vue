@@ -5,8 +5,6 @@ defineProps<{
   supportingCopy: string;
   thesis: string;
   callout: string;
-  workerCount: number;
-  scenarioCount: number;
 }>();
 </script>
 
@@ -15,7 +13,6 @@ defineProps<{
     <div class="mx-auto max-w-6xl">
       <div class="flex items-center justify-between gap-4">
         <span class="story-chip">Interactive data story</span>
-        <p class="hidden text-sm font-medium text-ink/60 md:block">Phase 1 and Phase 2</p>
       </div>
 
       <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.3fr)_minmax(320px,0.9fr)] lg:items-end">
@@ -32,9 +29,9 @@ defineProps<{
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <span class="story-chip">{{ workerCount }} calendars in the story</span>
-            <span class="story-chip">{{ scenarioCount }} later scenarios prepared</span>
-            <span class="story-chip">Local JSON, no backend</span>
+            <span class="story-chip">Two fictional workdays</span>
+            <span class="story-chip">One surprising result</span>
+            <span class="story-chip">Interactive simulator</span>
           </div>
         </div>
 
@@ -58,7 +55,7 @@ defineProps<{
 
       <div class="mt-12 flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.24em] text-ink/55">
         <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/80 text-lg text-accent motion-safe:animate-bounce">↓</span>
-        <p>Scroll to compare the calendars in the next phase of the story</p>
+        <p>Scroll to compare the calendars</p>
       </div>
     </div>
   </section>

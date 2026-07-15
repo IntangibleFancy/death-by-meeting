@@ -27,8 +27,6 @@ async function handlePrediction(profileId: string) {
       :supporting-copy="'People often assume fewer meeting hours automatically create more productive days. The data tells a different story.'"
       :thesis="storyData.project.thesis"
       :callout="storyData.storyCallouts[0]"
-      :worker-count="storyData.workerProfiles.length"
-      :scenario-count="storyData.simulationScenarios.length"
     />
 
     <WorkerComparison
