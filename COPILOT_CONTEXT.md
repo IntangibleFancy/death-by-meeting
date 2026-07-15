@@ -34,6 +34,7 @@ Use:
 - Local JSON data
 - Vue Composition API
 - Vue Single File Components
+- Vercel
 
 Optional:
 
